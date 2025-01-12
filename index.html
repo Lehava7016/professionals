@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex,nofollow">
-    <title>אינדקס בעלי מקצוע</title>
+    <title>מאגר בעלי העסקים של פלוגת להבה</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,14 +16,14 @@
         header {
             background-color: #007BFF;
             color: white;
-            padding: 10px 0;
+            padding: 40px 0;
             text-align: center;
             position: relative;
         }
 
         header img {
-            width: 50px;
-            height: 50px;
+            width: 170px;
+            height: 100px;
             border-radius: 50%;
             position: absolute;
             top: 50%;
@@ -36,7 +36,6 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
             bottom: 0;
             width: 100%;
         }
@@ -93,54 +92,60 @@
             gap: 20px;
         }
 
-        a {
+        .call-button {
+            display: inline-block;
+            background-color: #20b81d;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
             text-decoration: none;
-            color: #007BFF;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .call-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
+<script src="https://cdn.enable.co.il/licenses/enable-L361885lgmjuo3t4-0125-67429/init.js"></script>
 <body>
     <header>
-        <h1>אינדקס בעלי מקצוע</h1>
-        <img src="https://via.placeholder.com/50" alt="לוגו">
+        <img src="https://lehava7016.github.io/professionals/לוגו להבה.png" alt="לוגו">
     </header>
-
+    <h1>מאגר בעלי העסקים של פלוגת להבה</h1>
     <div class="container">
         <div class="cards-grid" id="cards-grid">
-            <!-- Cards will be dynamically inserted here -->
         </div>
     </div>
 
     <footer>
+        <p>להוספת או שינוי פרטים, ניתן לשלוח הודעה למייל הבא: lehava7016@mailfence.com</p>      
         <p>כל הזכויות שמורות &copy; 2025</p>
     </footer>
 
     <script>
         const professionals = [
             {
-                image: 'https://via.placeholder.com/100',
-                name: 'יוסי כהן',
-                specialty: 'חשמלאי',
-                phone: '123-456-7890',
-                email: 'yossi.cohen@example.com'
+                image: 'https://lehava7016.github.io/professionals/שמחון.png',
+                name: 'אברהם שמחון',
+                specialty: 'חשמלאי, מיזוג אוויר, שיפוצים',
+                phone: '052-4520580',
             },
             {
-                image: 'https://via.placeholder.com/100',
-                name: 'שיר לוי',
-                specialty: 'אינסטלטור',
-                phone: '234-567-8901',
-                email: 'shir.levi@example.com'
+                image: 'https://lehava7016.github.io/professionals/אלכס-אקטושב.png',
+                name: 'אלכס אקטושב',
+                specialty: 'מטפל במגע - עיסוי',
+                phone: '052-4379446',
             },
             {
-                image: 'https://via.placeholder.com/100',
-                name: 'מיכאל חן',
-                specialty: 'נגר',
-                phone: '345-678-9012',
-                email: 'michael.chen@example.com'
+                image: 'https://lehava7016.github.io/professionals/ציון-ישי.png',
+                name: 'ציון ישי',
+                specialty: 'מתנפחים לאירועים',
+                phone: '054-7099262',
             }
         ];
 
@@ -154,8 +159,7 @@
                 <img src="${pro.image}" alt="${pro.name}">
                 <h2>${pro.name}</h2>
                 <p><strong>תחום התמחות:</strong> ${pro.specialty}</p>
-                <p><strong>טלפון:</strong> <a href="tel:${pro.phone}">${pro.phone}</a></p>
-                <p><strong>אימייל:</strong> <a href="mailto:${pro.email}">${pro.email}</a></p>
+                <button class="call-button" onclick="location.href='tel:${pro.phone}'">התקשר</button>
             `;
 
             grid.appendChild(card);
