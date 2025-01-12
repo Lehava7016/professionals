@@ -6,11 +6,21 @@
     <meta name="robots" content="noindex,nofollow">
     <title>מאגר בעלי העסקים של פלוגת להבה</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
             background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         header {
@@ -31,24 +41,25 @@
             transform: translate(-50%, -50%);
         }
 
-        footer {
-            background-color: #007BFF;
-            color: white;
+        h1 {
             text-align: center;
-            padding: 10px 0;
-            bottom: 0;
-            width: 100%;
+            margin: 20px 0;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 20px auto;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
         }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
+        .cards-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
         }
 
         .card {
@@ -59,7 +70,7 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 15px;
-            margin: 10px;
+            width: 250px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s;
         }
@@ -86,12 +97,6 @@
             font-size: 14px;
         }
 
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
         .call-button {
             display: inline-block;
             background-color: #20b81d;
@@ -110,22 +115,16 @@
             background-color: #0056b3;
         }
 
-        html, body {
-            height: 100%;
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
         }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .container {
-            flex: 1;
-        }
-
     </style>
 </head>
-<script src="https://cdn.enable.co.il/licenses/enable-L361885lgmjuo3t4-0125-67429/init.js"></script>
+<script src="https://cdn.enable.co.il/licenses/enable-L361885lgmjuo3t4-0125-67429/init.js"></script
 <body>
     <header>
         <img src="https://lehava7016.github.io/professionals/לוגו להבה.png" alt="לוגו">
@@ -135,9 +134,8 @@
         <div class="cards-grid" id="cards-grid">
         </div>
     </div>
-
     <footer>
-        <p>להוספת או שינוי פרטים, ניתן לשלוח הודעה למייל הבא: lehava7016@mailfence.com</p>      
+        <p>להוספת או שינוי פרטים, ניתן לשלוח הודעה למייל הבא: lehava7016@mailfence.com</p>
         <p>כל הזכויות שמורות &copy; 2025</p>
     </footer>
 
